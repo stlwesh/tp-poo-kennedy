@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ListeObjetsController"
+      prefHeight="500.0" prefWidth="700.0">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Liste des objets volés" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="tableObjets" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID/Numéro de série" prefWidth="120"/>
+            <TableColumn fx:id="colType" text="Type" prefWidth="100"/>
+            <TableColumn fx:id="colMarque" text="Marque" prefWidth="100"/>
+            <TableColumn fx:id="colModele" text="Modèle" prefWidth="120"/>
+            <TableColumn fx:id="colProprietaire" text="Propriétaire" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Rafraîchir" onAction="#rafraichirListe"/>
+        <Button text="Retour à l'accueil" onAction="#retourAccueil"/>
+    </HBox>
+</VBox>
